@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
 
+    private GameObject heldObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +39,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
         rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3(movement.x, rigidBody.velocity.y, movement.z).normalized * moveSpeed, Time.deltaTime * 15f);
+
+
     }
 }
