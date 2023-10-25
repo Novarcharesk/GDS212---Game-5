@@ -154,7 +154,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.UnityTechnologies.com.unity.template.urpblank
+    Android: com.DefaultCompany.GDS212Game5
     Standalone: com.Unity-Technologies.com.unity.template.urp-blank
     iPhone: com.DefaultCompany.GDS212---Game-5
   buildNumber:
