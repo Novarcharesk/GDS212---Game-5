@@ -45,7 +45,16 @@ public class PlayerController : MonoBehaviour
         {
             if (pendingObject != null)
             {
-                heldObject = pendingObject;
+                // check if still inside trigger collider of pendingObject
+                for (int i = 0; i < pendingObject.GetComponentsInChildren<Collider>().Length; i++)
+                {
+                    if (pendingObject.GetComponentsInChildren<Collider>()[i].bounds.Contains(transform.position))
+                    {
+                        heldObject = pendingObject;
+                        pendingObject = null;
+                        break;
+                    }
+                }
             }
             else
             {
