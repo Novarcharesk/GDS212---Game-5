@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
 
-    private GameObject heldObject;
+    public GameObject pendingObject;
+    public GameObject heldObject;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +39,39 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("WalkMultiplier", rigidBody.velocity.magnitude * 0.4f);
 
         Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
-        rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3(movement.x, rigidBody.velocity.y, movement.z).normalized * moveSpeed, Time.deltaTime * 15f);
+        rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3(movement.x, 0, movement.z).normalized * moveSpeed, Time.deltaTime * 15f);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (pendingObject != null)
+            {
+                heldObject = pendingObject;
+            }
+            else
+            {
+                heldObject = null;
+            }
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Atom"))
+        {
+            pendingObject = other.gameObject;
+        }
+    }
+
+    private void OnTriggerLeave(Collider other)
+    {
+        if (other.CompareTag("Atom") && other.gameObject == pendingObject)
+        {
+            pendingObject = null;
+            Debug.Log("Leaving " + other.gameObject.name + "and setting pendingObject to null");
+        }
+        else
+        {
+            Debug.Log("Leaving " + other.gameObject.name + "but not setting pendingObject to null");
+        }
     }
 }
