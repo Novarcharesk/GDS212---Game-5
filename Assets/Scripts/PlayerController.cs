@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
+    [Header("Settings")]
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float turnSpeed = 14f;
+    [SerializeField] private float velocityDampeningSpeed = 15f;
+    [SerializeField] private float pickupFallbackRange = 0.25f;
+    [SerializeField] private float animationWalkMultiplier = 0.4f;
     [Header("References")]
     [SerializeField] private Animator animator;
     public Transform pickupTargetSmall;
@@ -34,7 +38,7 @@ public class PlayerController : MonoBehaviour
         if (isWalking)
         {
             Quaternion targetRotation = Quaternion.LookRotation(new Vector3(horizontalInput, 0f, verticalInput));
-            rigidBody.MoveRotation(Quaternion.Slerp(rigidBody.rotation, targetRotation, Time.deltaTime * 14f));
+            rigidBody.MoveRotation(Quaternion.Slerp(rigidBody.rotation, targetRotation, Time.deltaTime * turnSpeed));
             animator.SetBool("Walking", true);
         }
         else
@@ -42,10 +46,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Walking", false);
         }
 
-        animator.SetFloat("WalkMultiplier", rigidBody.velocity.magnitude * 0.4f);
+        animator.SetFloat("WalkMultiplier", rigidBody.velocity.magnitude * animationWalkMultiplier);
 
         Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
-        rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3(movement.x, 0, movement.z).normalized * moveSpeed, Time.deltaTime * 15f);
+        rigidBody.velocity = Vector3.Lerp(rigidBody.velocity, new Vector3(movement.x, 0, movement.z).normalized * moveSpeed, Time.deltaTime * velocityDampeningSpeed);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -66,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 if (closestObject != null)
                 {
                     bool insideCollider = false;
-                    Collider[] colliders = Physics.OverlapSphere(transform.position, 0.25f);
+                    Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, pickupFallbackRange);
                     foreach (Collider collider in colliders)
                     {
                         if (collider.gameObject == closestObject)
@@ -78,9 +82,22 @@ public class PlayerController : MonoBehaviour
                     }
                     if (!insideCollider)
                     {
-                        Debug.Log("Not inside collider so clearing pendingObjects");
-                        pendingObjects.Clear();
-
+                        insideCollider = false;
+                        colliders = Physics.OverlapSphere(transform.position, pickupFallbackRange);
+                        foreach (Collider collider in colliders)
+                        {
+                            if (collider.gameObject == closestObject)
+                            {
+                                PickupObject(closestObject);
+                                insideCollider = true;
+                                break;
+                            }
+                        }
+                        if (!insideCollider)
+                        {
+                            Debug.Log("Not inside collider so clearing pendingObjects");
+                            pendingObjects.Clear();
+                        }
                     }
                 }
             }
@@ -92,14 +109,31 @@ public class PlayerController : MonoBehaviour
             else
             {
                 // check for atoms in range
-                Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, 0.25f);
+                bool insideCollider = false;
+                Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, pickupFallbackRange);
                 foreach (Collider collider in colliders)
                 {
-                    if (collider.CompareTag("Atom"))
+                    if (collider.CompareTag("Atom") || collider.CompareTag("Connector"))
                     {
                         PickupObject(collider.gameObject);
+                        insideCollider = true;
                         break;
                     }
+                }
+                if (!insideCollider)
+                {
+                    insideCollider = false;
+                    colliders = Physics.OverlapSphere(transform.position, pickupFallbackRange);
+                    foreach (Collider collider in colliders)
+                    {
+                        if (collider.CompareTag("Atom") || collider.CompareTag("Connector"))
+                        {
+                            PickupObject(collider.gameObject);
+                            insideCollider = true;
+                            break;
+                        }
+                    }
+
                 }
             }
         }
@@ -123,7 +157,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Atom") && heldObject == null)
+        if ((other.CompareTag("Atom") || other.CompareTag("Connector")) && heldObject == null)
         {
             pendingObjects.Add(other.gameObject);
             other.gameObject.GetComponent<AtomManager>().debugActive = true;
@@ -133,7 +167,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Atom"))
+        if (other.CompareTag("Atom") || other.CompareTag("Connector"))
         {
             pendingObjects.Remove(other.gameObject);
             other.gameObject.GetComponent<AtomManager>().debugActive = false;
