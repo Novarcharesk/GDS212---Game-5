@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene (change "GameScene" to your actual scene name)
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void OpenOptions()
