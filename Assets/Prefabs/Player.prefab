@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 471176034695270079}
   - component: {fileID: 6823151839084070594}
   - component: {fileID: 4055717761247197648}
-  - component: {fileID: 1128595953251540459}
+  - component: {fileID: 7614888879999115752}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -135,8 +135,8 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &1128595953251540459
-BoxCollider:
+--- !u!136 &7614888879999115752
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -153,9 +153,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.25, y: 4, z: 2}
-  m_Center: {x: 0, y: 1.87, z: 0.2}
+  serializedVersion: 2
+  m_Radius: 1.125
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.87, z: 0}
 --- !u!1001 &3374623170442309682
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cae3f9537776dea41855a724b56dd2c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cae3f9537776dea41855a724b56dd2c9,
         type: 3}
