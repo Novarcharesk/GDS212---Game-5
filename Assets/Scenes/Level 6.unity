@@ -643,6 +643,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_text
+      value: Acetic Acid - CH3COOH
+      objectReference: {fileID: 0}
     - target: {fileID: 2951437121028547112, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -653,6 +658,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 981579908}
+    - target: {fileID: 3414100277654805228, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_Name
+      value: Acetic Acid
+      objectReference: {fileID: 0}
     - target: {fileID: 3888720262851493181, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -688,11 +698,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 114341327}
+    - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 589.5464
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56.421
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -318.79065
+      objectReference: {fileID: 0}
     - target: {fileID: 8084405488427494742, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 981579908}
+    - target: {fileID: 8465483509742274835, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 549.0978
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465483509742274835, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -305.59082
+      objectReference: {fileID: 0}
     - target: {fileID: 8624524490714406052, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
