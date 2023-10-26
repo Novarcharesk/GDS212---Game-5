@@ -10,6 +10,8 @@ public class AtomManager : MonoBehaviour
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
     private PlayerController playerController => GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 
+    public bool debugActive;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +69,32 @@ public class AtomManager : MonoBehaviour
         Medium,
         Large,
         VeryLarge
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (debugActive)
+        {
+            Gizmos.color = new Color(0, 1, 0, 0.35f);
+        }
+        else
+        {
+            Gizmos.color = new Color(1, 0, 0, 0.35f);
+        }
+        switch (atomSize)
+        {
+            case AtomSize.Small:
+                Gizmos.DrawSphere(new Vector3(transform.position.x, 1, transform.position.z), 5.5f);
+                break;
+            case AtomSize.Medium:
+                Gizmos.DrawSphere(new Vector3(transform.position.x, 1, transform.position.z), 6f);
+                break;
+            case AtomSize.Large:
+                Gizmos.DrawSphere(new Vector3(transform.position.x, 1, transform.position.z), 7f);
+                break;
+            case AtomSize.VeryLarge:
+                Gizmos.DrawSphere(new Vector3(transform.position.x, 1, transform.position.z), 8.25f);
+                break;
+        }
     }
 }

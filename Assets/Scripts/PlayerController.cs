@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
                 {
                     if (pendingObject.GetComponentsInChildren<Collider>()[i].bounds.Contains(transform.position))
                     {
-                        Debug.Log("Picking up " + pendingObject.name);
                         PickupObject(pendingObject);
                         insideCollider = true;
                         break;
@@ -65,25 +64,37 @@ public class PlayerController : MonoBehaviour
                 }
                 if (!insideCollider)
                 {
-                    Debug.Log("Not inside collider of " + pendingObject.name + " so setting pendingObject to null");
-                    pendingObject = null;
+                    Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, 0.25f);
+                    foreach (Collider collider in colliders)
+                    {
+                        if (collider.CompareTag("Atom"))
+                        {
+                            PickupObject(collider.gameObject);
+                            insideCollider = true;
+                            break;
+                        }
+                    }
+                    if (!insideCollider)
+                    {
+                        Debug.Log("Not inside collider of " + pendingObject.name + " so setting pendingObject to null");
+                        pendingObject = null;
+
+                    }
                 }
             }
             else if (heldObject != null)
             {
-                // drop the object here
-                Debug.Log("Dropping " + heldObject.name);
-                heldObject = null;
+                // drop the object
+                DropObject(heldObject);
             }
             else
             {
                 // check for atoms in range
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
+                Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, 0.25f);
                 foreach (Collider collider in colliders)
                 {
                     if (collider.CompareTag("Atom"))
                     {
-                        Debug.Log("Picking up " + collider.gameObject.name);
                         PickupObject(collider.gameObject);
                         break;
                     }
@@ -97,6 +108,15 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Picking up " + obj.name);
         heldObject = obj;
         pendingObject = null;
+        obj.GetComponent<AtomManager>().PickupAtom();
+    }
+
+    private void DropObject(GameObject obj)
+    {
+        Debug.Log("Dropping " + obj.name);
+        heldObject = null;
+        pendingObject = null;
+        obj.GetComponent<AtomManager>().DropAtom();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -104,6 +124,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Atom") && heldObject == null)
         {
             pendingObject = other.gameObject;
+            other.gameObject.GetComponent<AtomManager>().debugActive = true;
             Debug.Log("Entering " + other.gameObject.name);
         }
     }
@@ -113,7 +134,12 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Atom") && other.gameObject == pendingObject)
         {
             pendingObject = null;
+            other.gameObject.GetComponent<AtomManager>().debugActive = false;
             Debug.Log("Leaving " + other.gameObject.name + " and setting pendingObject to null");
+        }
+        else if (other.CompareTag("Atom"))
+        {
+            other.gameObject.GetComponent<AtomManager>().debugActive = false;
         }
     }
 }
