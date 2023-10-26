@@ -58,6 +58,14 @@ public class PlayerController : MonoBehaviour
                 // find the object closest to the pickup small transform
                 GameObject closestObject = null;
                 float closestDistance = float.MaxValue;
+                Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, pickupFallbackRange);
+                foreach (Collider collider in colliders)
+                {
+                    if ((collider.CompareTag("Atom") || collider.CompareTag("Connector")) && !pendingObjects.Contains(collider.gameObject))
+                    {
+                        pendingObjects.Add(collider.gameObject);
+                    }
+                }
                 foreach (GameObject obj in pendingObjects)
                 {
                     float distance = Vector3.Distance(obj.transform.position, pickupTargetSmall.position);
@@ -70,7 +78,7 @@ public class PlayerController : MonoBehaviour
                 if (closestObject != null)
                 {
                     bool insideCollider = false;
-                    Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, pickupFallbackRange);
+                    colliders = Physics.OverlapSphere(pickupTargetSmall.position, pickupFallbackRange);
                     foreach (Collider collider in colliders)
                     {
                         if (collider.gameObject == closestObject)
@@ -122,7 +130,6 @@ public class PlayerController : MonoBehaviour
                 }
                 if (!insideCollider)
                 {
-                    insideCollider = false;
                     colliders = Physics.OverlapSphere(transform.position, pickupFallbackRange);
                     foreach (Collider collider in colliders)
                     {
