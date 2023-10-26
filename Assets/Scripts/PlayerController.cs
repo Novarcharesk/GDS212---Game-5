@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
+    [Header("References")]
     [SerializeField] private Animator animator;
-    private Rigidbody rigidBody => GetComponent<Rigidbody>();
+    public Transform pickupTargetSmall;
+    public Transform pickupTargetMedium;
+    public Transform pickupTargetLarge;
+    public Transform pickupTargetVeryLarge;
 
+    private Rigidbody rigidBody => GetComponent<Rigidbody>();
     public GameObject pendingObject;
     public GameObject heldObject;
 
@@ -45,42 +51,69 @@ public class PlayerController : MonoBehaviour
         {
             if (pendingObject != null)
             {
-                // check if still inside trigger collider of pendingObject
+                // checking if still inside collider (this check usually always passes)
+                bool insideCollider = false;
                 for (int i = 0; i < pendingObject.GetComponentsInChildren<Collider>().Length; i++)
                 {
                     if (pendingObject.GetComponentsInChildren<Collider>()[i].bounds.Contains(transform.position))
                     {
-                        heldObject = pendingObject;
-                        pendingObject = null;
+                        Debug.Log("Picking up " + pendingObject.name);
+                        PickupObject(pendingObject);
+                        insideCollider = true;
+                        break;
+                    }
+                }
+                if (!insideCollider)
+                {
+                    Debug.Log("Not inside collider of " + pendingObject.name + " so setting pendingObject to null");
+                    pendingObject = null;
+                }
+            }
+            else if (heldObject != null)
+            {
+                // drop the object here
+                Debug.Log("Dropping " + heldObject.name);
+                heldObject = null;
+            }
+            else
+            {
+                // check for atoms in range
+                Collider[] colliders = Physics.OverlapSphere(transform.position, 1f);
+                foreach (Collider collider in colliders)
+                {
+                    if (collider.CompareTag("Atom"))
+                    {
+                        Debug.Log("Picking up " + collider.gameObject.name);
+                        PickupObject(collider.gameObject);
                         break;
                     }
                 }
             }
-            else
-            {
-                heldObject = null;
-            }
         }
+    }
+
+    private void PickupObject(GameObject obj)
+    {
+        Debug.Log("Picking up " + obj.name);
+        heldObject = obj;
+        pendingObject = null;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Atom"))
+        if (other.CompareTag("Atom") && heldObject == null)
         {
             pendingObject = other.gameObject;
+            Debug.Log("Entering " + other.gameObject.name);
         }
     }
 
-    private void OnTriggerLeave(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Atom") && other.gameObject == pendingObject)
         {
             pendingObject = null;
-            Debug.Log("Leaving " + other.gameObject.name + "and setting pendingObject to null");
-        }
-        else
-        {
-            Debug.Log("Leaving " + other.gameObject.name + "but not setting pendingObject to null");
+            Debug.Log("Leaving " + other.gameObject.name + " and setting pendingObject to null");
         }
     }
 }
