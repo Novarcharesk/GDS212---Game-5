@@ -203,6 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   animator: {fileID: 8416082931999881658}
+  pickupTargetSmall: {fileID: 1891732060506266280}
+  pickupTargetMedium: {fileID: 2495919173721112149}
+  pickupTargetLarge: {fileID: 5884433752826109988}
+  pickupTargetVeryLarge: {fileID: 4428248773472489094}
   pendingObject: {fileID: 0}
   heldObject: {fileID: 0}
 --- !u!54 &4055717761247197648
