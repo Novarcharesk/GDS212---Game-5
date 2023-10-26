@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6432205589375408405}
+  - component: {fileID: 4902327621209218124}
   - component: {fileID: 7364020650259109737}
   - component: {fileID: 3087209398804275993}
-  - component: {fileID: 5634496500474258609}
+  - component: {fileID: 1981849322347140862}
   m_Layer: 0
   m_Name: Oxygen
   m_TagString: Atom
@@ -159,6 +160,20 @@ Transform:
   - {fileID: 3272612346197125406}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4902327621209218124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9102372620610154688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e063878b44dcac40a37feb0ce154c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yPosition: 5
+  atomSize: 3
 --- !u!54 &7364020650259109737
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -207,8 +222,8 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 4.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &5634496500474258609
-SphereCollider:
+--- !u!136 &1981849322347140862
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -225,8 +240,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 6
+  serializedVersion: 2
+  m_Radius: 8
+  m_Height: 20
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &40476547053679775
 PrefabInstance:

@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5784061202032449336}
-  - component: {fileID: 8263370465825472870}
   - component: {fileID: 6441664615442221261}
   - component: {fileID: 376122435662611618}
   - component: {fileID: 3187787252695286614}
-  - component: {fileID: 222629627441490544}
+  - component: {fileID: 2886408580951456375}
   m_Layer: 0
   m_Name: Carbon
   m_TagString: Atom
@@ -61,19 +60,6 @@ Transform:
   - {fileID: 7955775500663751069}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8263370465825472870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2320823731790627095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d89e55fd4988c2479bf939d7755fdc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickSoundIndex: 0
 --- !u!114 &6441664615442221261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e063878b44dcac40a37feb0ce154c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yPosition: 5
+  atomSize: 1
 --- !u!54 &376122435662611618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134,8 +122,8 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &222629627441490544
-SphereCollider:
+--- !u!136 &2886408580951456375
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,8 +140,10 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 5
+  serializedVersion: 2
+  m_Radius: 5.5
+  m_Height: 20
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &43874321375854923
 PrefabInstance:
