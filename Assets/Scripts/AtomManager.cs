@@ -55,6 +55,7 @@ public class AtomManager : MonoBehaviour
         float rotationOffset = Mathf.Round(playerController.transform.rotation.eulerAngles.y / 90) * 90 - playerController.transform.rotation.eulerAngles.y;
         Debug.Log(rotationOffset);
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y - rotationOffset, 0);
+        CancelInvoke("SetKinematicTrue");
         SetKinematic(false);
         if (hingeJointToPlayer != null)
         {
@@ -89,7 +90,7 @@ public class AtomManager : MonoBehaviour
         Destroy(hingeJointToPlayer);
         hingeJointToPlayer = null;
         rigidBody.isKinematic = true;
-        Invoke("SetKinematicTrue", 0.5f);
+        Invoke("SetKinematicTrue", 0.3f);
         SnapToGrid();
         ConnectToConnector();
     }
