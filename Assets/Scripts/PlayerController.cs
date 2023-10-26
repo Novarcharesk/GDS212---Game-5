@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public Transform pickupTargetVeryLarge;
 
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
-    public GameObject pendingObject;
-    public GameObject heldObject;
+    private List<GameObject> pendingObjects = new List<GameObject>();
+    private GameObject heldObject;
 
     // Start is called before the first frame update
     void Start()
@@ -49,35 +49,37 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (pendingObject != null)
+            if (pendingObjects.Count > 0)
             {
-                // checking if still inside collider (this check usually always passes)
-                bool insideCollider = false;
-                for (int i = 0; i < pendingObject.GetComponentsInChildren<Collider>().Length; i++)
+                // find the object closest to the pickup small transform
+                GameObject closestObject = null;
+                float closestDistance = float.MaxValue;
+                foreach (GameObject obj in pendingObjects)
                 {
-                    if (pendingObject.GetComponentsInChildren<Collider>()[i].bounds.Contains(transform.position))
+                    float distance = Vector3.Distance(obj.transform.position, pickupTargetSmall.position);
+                    if (distance < closestDistance)
                     {
-                        PickupObject(pendingObject);
-                        insideCollider = true;
-                        break;
+                        closestObject = obj;
+                        closestDistance = distance;
                     }
                 }
-                if (!insideCollider)
+                if (closestObject != null)
                 {
-                    Collider[] colliders = Physics.OverlapSphere(pickupTargetSmall.position, 0.25f);
+                    bool insideCollider = false;
+                    Collider[] colliders = Physics.OverlapSphere(transform.position, 0.25f);
                     foreach (Collider collider in colliders)
                     {
-                        if (collider.CompareTag("Atom"))
+                        if (collider.gameObject == closestObject)
                         {
-                            PickupObject(collider.gameObject);
+                            PickupObject(closestObject);
                             insideCollider = true;
                             break;
                         }
                     }
                     if (!insideCollider)
                     {
-                        Debug.Log("Not inside collider of " + pendingObject.name + " so setting pendingObject to null");
-                        pendingObject = null;
+                        Debug.Log("Not inside collider so clearing pendingObjects");
+                        pendingObjects.Clear();
 
                     }
                 }
@@ -106,24 +108,24 @@ public class PlayerController : MonoBehaviour
     private void PickupObject(GameObject obj)
     {
         Debug.Log("Picking up " + obj.name);
-        heldObject = obj;
-        pendingObject = null;
         obj.GetComponent<AtomManager>().PickupAtom();
+        heldObject = obj;
+        pendingObjects.Clear();
     }
 
     private void DropObject(GameObject obj)
     {
         Debug.Log("Dropping " + obj.name);
-        heldObject = null;
-        pendingObject = null;
         obj.GetComponent<AtomManager>().DropAtom();
+        heldObject = null;
+        pendingObjects.Clear();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Atom") && heldObject == null)
         {
-            pendingObject = other.gameObject;
+            pendingObjects.Add(other.gameObject);
             other.gameObject.GetComponent<AtomManager>().debugActive = true;
             Debug.Log("Entering " + other.gameObject.name);
         }
@@ -131,14 +133,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Atom") && other.gameObject == pendingObject)
+        if (other.CompareTag("Atom"))
         {
-            pendingObject = null;
-            other.gameObject.GetComponent<AtomManager>().debugActive = false;
-            Debug.Log("Leaving " + other.gameObject.name + " and setting pendingObject to null");
-        }
-        else if (other.CompareTag("Atom"))
-        {
+            pendingObjects.Remove(other.gameObject);
             other.gameObject.GetComponent<AtomManager>().debugActive = false;
         }
     }

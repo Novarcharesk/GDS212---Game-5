@@ -9,6 +9,7 @@ public class AtomManager : MonoBehaviour
     [SerializeField] private AtomSize atomSize = AtomSize.Small;
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
     private PlayerController playerController => GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+    private HingeJoint hingeJointToPlayer;
 
     public bool debugActive;
 
@@ -46,18 +47,24 @@ public class AtomManager : MonoBehaviour
                 break;
         }
         rigidBody.isKinematic = false;
-        HingeJoint hingeJoint = gameObject.AddComponent<HingeJoint>();
-        hingeJoint.connectedBody = playerController.GetComponent<Rigidbody>();
-        hingeJoint.axis = new Vector3(0, 0, 1);
-        hingeJoint.useSpring = true;
-        hingeJoint.spring = new JointSpring() { spring = 10, damper = 1 };
-        hingeJoint.useLimits = true;
-        hingeJoint.limits = new JointLimits() { min = -10, max = 10 };
+        if (hingeJointToPlayer != null)
+        {
+            Destroy(hingeJointToPlayer);
+            hingeJointToPlayer = null;
+        }
+        hingeJointToPlayer = gameObject.AddComponent<HingeJoint>();
+        hingeJointToPlayer.connectedBody = playerController.GetComponent<Rigidbody>();
+        hingeJointToPlayer.axis = new Vector3(0, 0, 1);
+        hingeJointToPlayer.useSpring = true;
+        hingeJointToPlayer.spring = new JointSpring() { spring = 10, damper = 1 };
+        hingeJointToPlayer.useLimits = true;
+        hingeJointToPlayer.limits = new JointLimits() { min = -10, max = 10 };
     }
 
     public void DropAtom()
     {
-        Destroy(GetComponent<HingeJoint>());
+        Destroy(hingeJointToPlayer);
+        hingeJointToPlayer = null;
         rigidBody.isKinematic = true;
         transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
         transform.rotation = Quaternion.identity;
