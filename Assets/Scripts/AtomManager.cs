@@ -6,6 +6,7 @@ public class AtomManager : MonoBehaviour
 {
     [Header("Configuration")]
     [SerializeField] private float yPosition = 5f;
+    [SerializeField] private float gridSize = 3f;
     [SerializeField] private AtomSize atomSize = AtomSize.Small;
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
     private PlayerController playerController => GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -16,7 +17,7 @@ public class AtomManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SnapToGrid();
     }
 
     // Update is called once per frame
@@ -31,21 +32,21 @@ public class AtomManager : MonoBehaviour
         {
             case AtomSize.Small:
                 transform.position = playerController.pickupTargetSmall.position;
-                transform.rotation = playerController.pickupTargetSmall.rotation;
                 break;
             case AtomSize.Medium:
                 transform.position = playerController.pickupTargetMedium.position;
-                transform.rotation = playerController.pickupTargetMedium.rotation;
                 break;
             case AtomSize.Large:
                 transform.position = playerController.pickupTargetLarge.position;
-                transform.rotation = playerController.pickupTargetLarge.rotation;
                 break;
             case AtomSize.VeryLarge:
                 transform.position = playerController.pickupTargetVeryLarge.position;
-                transform.rotation = playerController.pickupTargetVeryLarge.rotation;
                 break;
         }
+        // set rotation to playerController.pickupTargetSmall.rotation + 0, 90, 180, 270 depending on the current rotation
+        float rotationOffset = Mathf.Round(playerController.transform.rotation.eulerAngles.y / 90) * 90 - playerController.transform.rotation.eulerAngles.y;
+        Debug.Log(rotationOffset);
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y - rotationOffset, 0);
         rigidBody.isKinematic = false;
         if (hingeJointToPlayer != null)
         {
@@ -66,8 +67,16 @@ public class AtomManager : MonoBehaviour
         Destroy(hingeJointToPlayer);
         hingeJointToPlayer = null;
         rigidBody.isKinematic = true;
-        transform.position = new Vector3(transform.position.x, yPosition, transform.position.z);
-        transform.rotation = Quaternion.identity;
+        SnapToGrid();
+    }
+
+    private void SnapToGrid()
+    {
+        float x = Mathf.Round(transform.position.x / gridSize) * gridSize;
+        float z = Mathf.Round(transform.position.z / gridSize) * gridSize;
+        transform.position = new Vector3(x, yPosition, z);
+        float y = Mathf.Round(transform.rotation.eulerAngles.y / 90) * 90;
+        transform.rotation = Quaternion.Euler(0, y, 0);
     }
 
     public enum AtomSize

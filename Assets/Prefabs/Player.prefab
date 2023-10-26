@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 628670607242522262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.968, z: 6.1}
+  m_LocalPosition: {x: 0, y: 2.97, z: 6.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1432282995657193322}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.968, z: 2.85}
+  m_LocalPosition: {x: 0, y: 2.97, z: 2.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 4274155844758143087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.968, z: 5.35}
+  m_LocalPosition: {x: 0, y: 2.97, z: 5.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -202,13 +202,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  turnSpeed: 14
+  velocityDampeningSpeed: 15
+  pickupFallbackRange: 0.25
+  animationWalkMultiplier: 0.4
   animator: {fileID: 8416082931999881658}
   pickupTargetSmall: {fileID: 1891732060506266280}
   pickupTargetMedium: {fileID: 2495919173721112149}
   pickupTargetLarge: {fileID: 5884433752826109988}
   pickupTargetVeryLarge: {fileID: 4428248773472489094}
-  pendingObject: {fileID: 0}
-  heldObject: {fileID: 0}
 --- !u!54 &4055717761247197648
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -284,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 5961106058172135354}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.968, z: 4.1}
+  m_LocalPosition: {x: 0, y: 2.97, z: 4.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

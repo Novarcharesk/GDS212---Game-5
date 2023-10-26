@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7057737353117697448}
   - component: {fileID: 958380206418096569}
   - component: {fileID: 9051031494797945918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hydrogen
   m_TagString: Atom
   m_Icon: {fileID: 0}
@@ -54,7 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e063878b44dcac40a37feb0ce154c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yPosition: 5
+  yPosition: 4
+  gridSize: 1.5
   atomSize: 0
   debugActive: 0
 --- !u!54 &7057737353117697448
@@ -115,7 +116,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -196,6 +197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ice01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -274,6 +280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ice01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -354,6 +365,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ice01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -432,6 +448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ice01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -512,6 +533,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ice01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -591,6 +617,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ice01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -669,6 +700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ice01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3a2ff2dbf7f2863418422824b1d3ef68,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
