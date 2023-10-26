@@ -18,6 +18,7 @@ public class StoryUtility : MonoBehaviour
     public GameObject scene9;
     public GameObject scene10;
     public GameObject scene11;
+    public GameObject scene12;
 
     public TextMeshProUGUI nextButton;
 
@@ -36,6 +37,7 @@ public class StoryUtility : MonoBehaviour
         scene9.SetActive(false);
         scene10.SetActive(false);
         scene11.SetActive(false);
+        scene12.SetActive(false);
 
         sceneIndex++;
 
@@ -82,6 +84,10 @@ public class StoryUtility : MonoBehaviour
         else if (sceneIndex == 11)
         {
             scene11.SetActive(true);
+        }
+        else if (sceneIndex == 12)
+        {
+            scene12.SetActive(true);
         }
         else
         {
