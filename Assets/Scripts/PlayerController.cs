@@ -180,4 +180,10 @@ public class PlayerController : MonoBehaviour
             other.gameObject.GetComponent<AtomManager>().debugActive = false;
         }
     }
+
+    public void ResetVariables()
+    {
+        pendingObjects.Clear();
+        heldObject = null;
+    }
 }
