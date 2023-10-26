@@ -88,9 +88,15 @@ public class AtomManager : MonoBehaviour
     {
         Destroy(hingeJointToPlayer);
         hingeJointToPlayer = null;
-        SetKinematic(true);
+        rigidBody.isKinematic = true;
+        Invoke("SetKinematicTrue", 0.5f);
         SnapToGrid();
         ConnectToConnector();
+    }
+
+    private void SetKinematicTrue()
+    {
+        SetKinematic(true);
     }
 
     private void SnapToGrid()
