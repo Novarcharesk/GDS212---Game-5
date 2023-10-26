@@ -14152,6 +14152,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 981579908}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySoundEffect
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1010852067}
         m_TargetAssemblyTypeName: StoryUtility, Assembly-CSharp
         m_MethodName: NextScene
@@ -26184,7 +26196,8 @@ MonoBehaviour:
   backgroundMusicClips:
   - {fileID: 0}
   soundEffectClips:
-  - {fileID: 0}
+  - {fileID: 8300000, guid: 8792b77ac4049c04891cd935550ccaa1, type: 3}
+  - {fileID: 8300000, guid: f619f584647584a4e9d0ea9f5e591634, type: 3}
 --- !u!4 &981579909
 Transform:
   m_ObjectHideFlags: 0
@@ -27251,19 +27264,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199ab8444640d5e43a1d50482e29ad0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene1: {fileID: 2049382660}
-  scene2: {fileID: 1843438213}
-  scene3: {fileID: 1326231266}
-  scene4: {fileID: 469198372}
-  scene5: {fileID: 171260940}
-  scene6: {fileID: 1429672041}
-  scene7: {fileID: 466153130}
-  scene8: {fileID: 247793839}
-  scene9: {fileID: 1890047868}
-  scene10: {fileID: 1728326762}
-  scene11: {fileID: 1315919348}
-  scene12: {fileID: 937992481}
-  nextButton: {fileID: 0}
+  scenes:
+  - {fileID: 2049382660}
+  - {fileID: 1843438213}
+  - {fileID: 1326231266}
+  - {fileID: 469198372}
+  - {fileID: 171260940}
+  - {fileID: 1429672041}
+  - {fileID: 466153130}
+  - {fileID: 247793839}
+  - {fileID: 1890047868}
+  - {fileID: 1728326762}
+  - {fileID: 1315919348}
+  - {fileID: 937992481}
 --- !u!1001 &1016912383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35796,7 +35809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1353699368}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1010852067}
+        m_TargetAssemblyTypeName: StoryUtility, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1353699368
 MonoBehaviour:
   m_ObjectHideFlags: 0
