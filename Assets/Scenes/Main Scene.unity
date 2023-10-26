@@ -26069,10 +26069,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb72c2fad3b20964ba08ab44409e181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusicSource: {fileID: 993887887}
+  backgroundMusicSource: {fileID: 0}
   soundEffectSource: {fileID: 0}
   backgroundMusicClips:
-  - {fileID: 8300000, guid: af48ac2773920ac438587cfe3576e048, type: 3}
+  - {fileID: 0}
   soundEffectClips: []
 --- !u!4 &981579909
 Transform:
