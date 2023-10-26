@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float animationWalkMultiplier = 0.4f;
     [Header("References")]
     [SerializeField] private Animator animator;
+    [SerializeField] private LevelManager levelManager;
     public Transform pickupTargetSmall;
     public Transform pickupTargetMedium;
     public Transform pickupTargetLarge;
@@ -160,6 +161,7 @@ public class PlayerController : MonoBehaviour
         obj.GetComponent<AtomManager>().DropAtom();
         heldObject = null;
         pendingObjects.Clear();
+        levelManager.CheckWinCondition();
     }
 
     private void OnTriggerEnter(Collider other)

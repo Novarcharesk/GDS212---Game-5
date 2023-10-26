@@ -79,11 +79,14 @@ MonoBehaviour:
   yPosition: 4
   gridSize: 1.5
   atomSize: 1
+  atomType: 1
   connectionPoints:
   - {fileID: 5431472599643574600}
   - {fileID: 4237306240292746771}
   - {fileID: 2463203472240600505}
   - {fileID: 335110176774354158}
+  hingeJoints: []
+  connections: []
   debugActive: 0
 --- !u!54 &376122435662611618
 Rigidbody:

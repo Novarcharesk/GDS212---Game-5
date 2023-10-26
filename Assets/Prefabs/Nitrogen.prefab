@@ -117,6 +117,7 @@ MonoBehaviour:
   yPosition: 4
   gridSize: 1.5
   atomSize: 2
+  atomType: 2
   connectionPoints:
   - {fileID: 5430455426600150345}
   - {fileID: 2578091437010412508}

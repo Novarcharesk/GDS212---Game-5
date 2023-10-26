@@ -8,12 +8,14 @@ public class AtomManager : MonoBehaviour
     [SerializeField] private float yPosition = 5f;
     [SerializeField] private float gridSize = 3f;
     [SerializeField] private AtomSize atomSize = AtomSize.Small;
+    public Compound.AtomType atomType;
     public List<Transform> connectionPoints = new List<Transform>(4);
     private Rigidbody rigidBody => GetComponent<Rigidbody>();
     private PlayerController playerController => GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     private HingeJoint hingeJointToPlayer;
     public List<HingeJoint> hingeJoints;
     public List<GameObject> connections;
+    public List<Compound.AtomType> connectedAtomTypes;
 
     public bool debugActive;
 
@@ -53,64 +55,7 @@ public class AtomManager : MonoBehaviour
         float rotationOffset = Mathf.Round(playerController.transform.rotation.eulerAngles.y / 90) * 90 - playerController.transform.rotation.eulerAngles.y;
         Debug.Log(rotationOffset);
         transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y - rotationOffset, 0);
-        rigidBody.isKinematic = false;
-        // messy but im tired
-        foreach (GameObject connection in connections)
-        {
-            if (connection != null)
-            {
-                connection.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                foreach (GameObject connection2 in connection.transform.parent.GetComponent<AtomManager>().connections)
-                {
-                    if (connection2 != null)
-                    {
-                        connection2.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                        foreach (GameObject connection3 in connection2.transform.parent.GetComponent<AtomManager>().connections)
-                        {
-                            if (connection3 != null)
-                            {
-                                connection3.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                foreach (GameObject connection4 in connection3.transform.parent.GetComponent<AtomManager>().connections)
-                                {
-                                    if (connection4 != null)
-                                    {
-                                        connection4.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                        foreach (GameObject connection5 in connection4.transform.parent.GetComponent<AtomManager>().connections)
-                                        {
-                                            if (connection5 != null)
-                                            {
-                                                connection5.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                                foreach (GameObject connection6 in connection5.transform.parent.GetComponent<AtomManager>().connections)
-                                                {
-                                                    if (connection6 != null)
-                                                    {
-                                                        connection6.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                                        foreach (GameObject connection7 in connection6.transform.parent.GetComponent<AtomManager>().connections)
-                                                        {
-                                                            if (connection7 != null)
-                                                            {
-                                                                connection7.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                                                foreach (GameObject connection8 in connection7.transform.parent.GetComponent<AtomManager>().connections)
-                                                                {
-                                                                    if (connection8 != null)
-                                                                    {
-                                                                        connection8.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = false;
-                                                                    }
-                                                                }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        SetKinematic(false);
         if (hingeJointToPlayer != null)
         {
             Destroy(hingeJointToPlayer);
@@ -143,7 +88,7 @@ public class AtomManager : MonoBehaviour
     {
         Destroy(hingeJointToPlayer);
         hingeJointToPlayer = null;
-        rigidBody.isKinematic = true;
+        SetKinematic(true);
         SnapToGrid();
         ConnectToConnector();
     }
@@ -215,6 +160,7 @@ public class AtomManager : MonoBehaviour
                             atomManager.hingeJoints[atomManager.connectionPoints.IndexOf(closestConnectionPoint)] = hingeJoint;
                             atomManager.connections[atomManager.connectionPoints.IndexOf(closestConnectionPoint)] = connectionPoint.gameObject;
                             rigidBody.isKinematic = false;
+                            atomManager.UpdateConnectedAtoms();
                         }
                     }
                 }
@@ -280,6 +226,85 @@ public class AtomManager : MonoBehaviour
                             atomManager.hingeJoints[atomManager.connectionPoints.IndexOf(closestConnectionPoint)] = hingeJoint;
                             atomManager.connections[atomManager.connectionPoints.IndexOf(closestConnectionPoint)] = connectionPoint.gameObject;
                             collider.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+                        }
+                    }
+                }
+            }
+        }
+        UpdateConnectedAtoms();
+    }
+
+    public void UpdateConnectedAtoms()
+    {
+        connectedAtomTypes.Clear();
+        for (int i = 0; i < connections.Count; i++)
+        {
+            if (connections[i] != null)
+            {
+                Compound.AtomType atomType = connections[i].transform.parent.GetComponent<AtomManager>().atomType;
+                if (atomType != Compound.AtomType._Connector)
+                {
+                    connectedAtomTypes.Add(atomType);
+                }
+            }
+        }
+    }
+
+    private void SetKinematic(bool isKinematic)
+    {
+        rigidBody.isKinematic = isKinematic;
+        // messy but im tired
+        foreach (GameObject connection in connections)
+        {
+            if (connection != null)
+            {
+                connection.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                foreach (GameObject connection2 in connection.transform.parent.GetComponent<AtomManager>().connections)
+                {
+                    if (connection2 != null)
+                    {
+                        connection2.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                        foreach (GameObject connection3 in connection2.transform.parent.GetComponent<AtomManager>().connections)
+                        {
+                            if (connection3 != null)
+                            {
+                                connection3.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                foreach (GameObject connection4 in connection3.transform.parent.GetComponent<AtomManager>().connections)
+                                {
+                                    if (connection4 != null)
+                                    {
+                                        connection4.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                        foreach (GameObject connection5 in connection4.transform.parent.GetComponent<AtomManager>().connections)
+                                        {
+                                            if (connection5 != null)
+                                            {
+                                                connection5.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                                foreach (GameObject connection6 in connection5.transform.parent.GetComponent<AtomManager>().connections)
+                                                {
+                                                    if (connection6 != null)
+                                                    {
+                                                        connection6.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                                        foreach (GameObject connection7 in connection6.transform.parent.GetComponent<AtomManager>().connections)
+                                                        {
+                                                            if (connection7 != null)
+                                                            {
+                                                                connection7.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                                                foreach (GameObject connection8 in connection7.transform.parent.GetComponent<AtomManager>().connections)
+                                                                {
+                                                                    if (connection8 != null)
+                                                                    {
+                                                                        connection8.transform.parent.GetComponent<AtomManager>().rigidBody.isKinematic = isKinematic;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
