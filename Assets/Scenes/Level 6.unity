@@ -500,12 +500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb72c2fad3b20964ba08ab44409e181c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1958506565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8676024790882277530, guid: 0609907eec8e6db429624e242aa2b488,
-    type: 3}
-  m_PrefabInstance: {fileID: 3622105559446440474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2115549799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -590,7 +584,7 @@ PrefabInstance:
     - target: {fileID: 870526237317431910, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_text
-      value: 'Yay! You made Water!
+      value: 'Yay! You made Acetate Acid!
 
         Onto the next amazing chemical!'
       objectReference: {fileID: 0}
@@ -719,6 +713,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0609907eec8e6db429624e242aa2b488, type: 3}
+--- !u!1 &3622105559446440475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8811202091851493121, guid: 0609907eec8e6db429624e242aa2b488,
+    type: 3}
+  m_PrefabInstance: {fileID: 3622105559446440474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3865509784328645114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,7 +731,12 @@ PrefabInstance:
         type: 3}
       propertyPath: winScreen
       value: 
-      objectReference: {fileID: 1958506565}
+      objectReference: {fileID: 3622105559446440475}
+    - target: {fileID: 457408817641924523, guid: f4fc65cb2e734324b9bb25162b746a8f,
+        type: 3}
+      propertyPath: requiredCompound.name
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7066446884495393718, guid: f4fc65cb2e734324b9bb25162b746a8f,
         type: 3}
       propertyPath: m_Name
