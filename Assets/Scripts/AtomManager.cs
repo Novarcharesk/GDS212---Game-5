@@ -29,6 +29,12 @@ public class AtomManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        SnapToGrid();
+        Invoke("SnapToGrid", 0.01f);
+    }
+
     // Update is called once per frame
     void Update()
     {
