@@ -205,8 +205,9 @@ MonoBehaviour:
   turnSpeed: 14
   velocityDampeningSpeed: 15
   pickupFallbackRange: 0.25
-  animationWalkMultiplier: 0.4
+  animationWalkMultiplier: 0.12
   animator: {fileID: 8416082931999881658}
+  levelManager: {fileID: 0}
   pickupTargetSmall: {fileID: 1891732060506266280}
   pickupTargetMedium: {fileID: 2495919173721112149}
   pickupTargetLarge: {fileID: 5884433752826109988}

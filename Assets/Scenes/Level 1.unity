@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: cb241bafd21b4ab48ab28460c779c22e,
+  m_LightingDataAsset: {fileID: 112000002, guid: f9747998359df0e4198d2abf3b7fbbbc,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 304f5407f1505f44b98b9bdcf093b9d4,
     type: 2}
@@ -410,11 +410,6 @@ PrefabInstance:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 114341327}
-    - target: {fileID: 6823151839084070594, guid: d3b1def4b1d0c514a87f821af75a06b5,
-        type: 3}
-      propertyPath: animationWalkMultiplier
-      value: 0.12
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
