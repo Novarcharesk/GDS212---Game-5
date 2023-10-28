@@ -151,6 +151,10 @@ public class Compound
                     {
                         attached6.Add(true);
                     }
+                    else if (atomManager.connectedAtomTypes.Contains(AtomType.Carbon) && atomManager.connectedAtomTypes.Contains(AtomType.Carbon))
+                    {
+                        attached6.Add(true);
+                    }
                     else
                     {
                         attached6.Add(false);

@@ -50,8 +50,8 @@ public class LevelManager : MonoBehaviour
                 SceneManager.LoadScene("Level 5");
                 break;
             case Compound.CompoundType.AmmoniumHydroxide:
-                //SceneManager.LoadScene("Level 6");
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("Level 6");
+                //SceneManager.LoadScene("Menu");
                 break;
             case Compound.CompoundType.AcetateAcid:
                 SceneManager.LoadScene("Menu");
