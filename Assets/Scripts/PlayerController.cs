@@ -145,6 +145,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R) && heldObject != null)
+        {
+            RotateObject(heldObject);
+        }
     }
 
     private void PickupObject(GameObject obj)
@@ -162,6 +167,11 @@ public class PlayerController : MonoBehaviour
         heldObject = null;
         pendingObjects.Clear();
         levelManager.CheckWinCondition();
+    }
+
+    private void RotateObject(GameObject obj)
+    {
+        obj.GetComponent<AtomManager>().RotateAtom();
     }
 
     private void OnTriggerEnter(Collider other)

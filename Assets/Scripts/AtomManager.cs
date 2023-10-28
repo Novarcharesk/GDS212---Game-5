@@ -115,6 +115,19 @@ public class AtomManager : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, y, 0);
     }
 
+    public void RotateAtom()
+    {
+        Destroy(hingeJointToPlayer);
+        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y + 90, 0);
+        hingeJointToPlayer = gameObject.AddComponent<HingeJoint>();
+        hingeJointToPlayer.connectedBody = playerController.GetComponent<Rigidbody>();
+        hingeJointToPlayer.axis = new Vector3(0, 0, 1);
+        hingeJointToPlayer.useSpring = true;
+        hingeJointToPlayer.spring = new JointSpring() { spring = 10, damper = 1 };
+        hingeJointToPlayer.useLimits = true;
+        hingeJointToPlayer.limits = new JointLimits() { min = -10, max = 10 };
+    }
+
     public void ConnectToConnector()
     {
         if (gameObject.CompareTag("Connector"))
@@ -322,6 +335,10 @@ public class AtomManager : MonoBehaviour
                     }
                 }
             }
+        }
+        if (isKinematic)
+        {
+            SnapToGrid();
         }
     }
 
