@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -10,14 +11,26 @@ public class LevelManager : MonoBehaviour
     
     [Header("References")]
     [SerializeField] private GameObject winScreen;
+    [SerializeField] private Animator transitionAnimator;
+
+    private AsyncOperation levelLoad;
 
     private void Start()
     {
         if (SceneManager.GetSceneByName("Background Scene").isLoaded == false)
         {
-            SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
+            levelLoad = SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
         }
     }
+
+    //private void FixedUpdate()
+    //{
+    //    if (levelLoad != null && levelLoad.isDone)
+    //    {
+    //        levelLoad = null;
+    //        // TODO: only start transition animation once complete
+    //    }
+    //}
 
     public void CheckWinCondition()
     {
@@ -33,29 +46,39 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void NextLevel()
+    public void NextLevel(Button button)
     {
+        button.interactable = false;
         switch (requiredCompound.name)
         {
             case Compound.CompoundType.Water:
-                SceneManager.LoadScene("Level 2");
+                StartCoroutine(LoadLevel("Level 2"));
                 break;
             case Compound.CompoundType.Methane:
-                SceneManager.LoadScene("Level 3");
+                StartCoroutine(LoadLevel("Level 3"));
                 break;
             case Compound.CompoundType.Ammonia:
-                SceneManager.LoadScene("Level 4");
+                StartCoroutine(LoadLevel("Level 4"));
                 break;
             case Compound.CompoundType.Methanol:
-                SceneManager.LoadScene("Level 5");
+                StartCoroutine(LoadLevel("Level 5"));
                 break;
             case Compound.CompoundType.AmmoniumHydroxide:
-                SceneManager.LoadScene("Level 6");
+                StartCoroutine(LoadLevel("Level 6"));
                 //SceneManager.LoadScene("Menu");
                 break;
             case Compound.CompoundType.AcetateAcid:
-                SceneManager.LoadScene("Menu");
+                StartCoroutine(LoadLevel("Menu"));
                 break;
         }
+    }
+
+    IEnumerator LoadLevel(string levelName)
+    {
+        transitionAnimator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelName);
     }
 }

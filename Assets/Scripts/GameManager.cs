@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Button startButton;      // Reference to the Start button in the UI
     public Button optionsButton;    // Reference to the Options button in the UI
     public Button quitButton;       // Reference to the Quit button in the UI
+    public Animator transitionAnimator;
 
     public void Start()
     {
@@ -25,7 +26,8 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene (change "GameScene" to your actual scene name)
-        SceneManager.LoadScene("Level 1");
+        StartCoroutine(LoadLevel("Level 1"));
+        startButton.interactable = false;
     }
 
     public void OpenOptions()
@@ -38,5 +40,14 @@ public class GameManager : MonoBehaviour
     {
         // Quit the application (works in standalone builds, not in the Unity Editor)
         Application.Quit();
+    }
+
+    IEnumerator LoadLevel(string levelName)
+    {
+        transitionAnimator.SetTrigger("Start");
+
+        yield return new WaitForSeconds(1);
+
+        SceneManager.LoadScene(levelName);
     }
 }
