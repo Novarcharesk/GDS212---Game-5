@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 2
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 99c9720ab356a0642a771bea13969a05
-  m_OcclusionCullingData: {fileID: 36300000, guid: 98662d7975c29d34da06736cf4dcca62,
+  m_SceneGUID: e44c20ebbe6b89e41b8b27727d49e53d
+  m_OcclusionCullingData: {fileID: 36300000, guid: 7cd8e650c58787a429a79526b8be3d51,
     type: 2}
 --- !u!104 &2
 RenderSettings:
@@ -1178,7 +1178,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 0609907eec8e6db429624e242aa2b488, type: 3}
 --- !u!1 &3622105559446440475 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8811202091851493121, guid: 0609907eec8e6db429624e242aa2b488,
+  m_CorrespondingSourceObject: {fileID: 8676024790882277530, guid: 0609907eec8e6db429624e242aa2b488,
     type: 3}
   m_PrefabInstance: {fileID: 3622105559446440474}
   m_PrefabAsset: {fileID: 0}

@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 2
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 99c9720ab356a0642a771bea13969a05
-  m_OcclusionCullingData: {fileID: 36300000, guid: 98662d7975c29d34da06736cf4dcca62,
+  m_SceneGUID: 8504cc1f62eaaab4490da8738845fd2b
+  m_OcclusionCullingData: {fileID: 36300000, guid: 7cd8e650c58787a429a79526b8be3d51,
     type: 2}
 --- !u!104 &2
 RenderSettings:
@@ -17670,6 +17670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 711965167}
   - component: {fileID: 711965168}
+  - component: {fileID: 711965169}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
@@ -18389,6 +18390,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100, y: 1, z: 100}
   m_Center: {x: 35, y: 0.4, z: -10}
+--- !u!65 &711965169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711965166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 1, z: 100}
+  m_Center: {x: 35, y: 10, z: -10}
 --- !u!1001 &716804864
 PrefabInstance:
   m_ObjectHideFlags: 0
