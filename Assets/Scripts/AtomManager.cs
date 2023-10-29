@@ -35,12 +35,6 @@ public class AtomManager : MonoBehaviour
         Invoke("SnapToGrid", 0.01f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PickupAtom()
     {
         switch (atomSize)
