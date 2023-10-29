@@ -7,20 +7,22 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     [Header("Level Configuration")]
-    public Compound requiredCompound;
-    [SerializeField] private bool loadBackgroundScene = true;
+    [SerializeField, Tooltip("Compound required to complete the level")] public Compound requiredCompound;
+    [SerializeField, Tooltip("Enable to ensure the background scene is loaded upon starting the game")] private bool loadBackgroundScene = true;
     
     [Header("References")]
-    [SerializeField] private GameObject winScreen;
-    [SerializeField] private Animator transitionAnimator;
+    [SerializeField, Tooltip("Reference to the Win Screen UI object (To enable upon completing the win condition)")] private GameObject winScreen;
+    [SerializeField, Tooltip("Reference to the animator responsible for the level transitions (To trigger the animation to play when changing levels)")] private Animator transitionAnimator;
 
-    private AsyncOperation levelLoad;
+    // private AsyncOperation levelLoad;
 
-    private void Start()
+    private void Awake()
     {
+        // check if the background scene is loaded
         if (SceneManager.GetSceneByName("Background Scene").isLoaded == false && loadBackgroundScene)
         {
-            levelLoad = SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
+            // load the background scene on top of the current scene
+            SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
         }
     }
 
@@ -33,6 +35,9 @@ public class LevelManager : MonoBehaviour
     //    }
     //}
 
+    /// <summary>
+    /// Checks if the win condition has been met
+    /// </summary>
     public void CheckWinCondition()
     {
         if (requiredCompound.IsAssembled())
@@ -42,11 +47,18 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Restarts the current level
+    /// </summary>
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    /// <summary>
+    /// Loads the next level in the sequence, disables the button that called this function if provided, and begins the transition animation
+    /// </summary>
+    /// <param name="button">The button that called this function</param>
     public void NextLevel(Button button = null)
     {
         if (button != null)
@@ -80,6 +92,11 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Loads the level with the given name and begins the transition animation
+    /// </summary>
+    /// <param name="levelName">The name of the level to load</param>
+    /// <returns></returns>
     IEnumerator LoadLevel(string levelName)
     {
         transitionAnimator.SetTrigger("Start");
