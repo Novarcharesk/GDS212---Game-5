@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Background Scene.unity
     guid: 8504cc1f62eaaab4490da8738845fd2b
+  - enabled: 1
+    path: Assets/Scenes/Explanation Scene.unity
+    guid: 6e1fe47b6aef92d4e8b8703f2d2b82e3
   - enabled: 0
     path: Assets/Game 5.unity
     guid: 29d9d8489bd02834495128e6211e7b92

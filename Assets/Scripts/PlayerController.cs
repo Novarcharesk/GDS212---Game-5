@@ -166,7 +166,10 @@ public class PlayerController : MonoBehaviour
         obj.GetComponent<AtomManager>().DropAtom();
         heldObject = null;
         pendingObjects.Clear();
-        levelManager.CheckWinCondition();
+        if (levelManager != null)
+        {
+            levelManager.CheckWinCondition();
+        }
     }
 
     private void RotateObject(GameObject obj)
@@ -181,6 +184,11 @@ public class PlayerController : MonoBehaviour
             pendingObjects.Add(other.gameObject);
             other.gameObject.GetComponent<AtomManager>().debugActive = true;
             Debug.Log("Entering " + other.gameObject.name);
+        }
+        else if (other.CompareTag("LoadingZone"))
+        {
+            levelManager.NextLevel();
+            Destroy(other);
         }
     }
 

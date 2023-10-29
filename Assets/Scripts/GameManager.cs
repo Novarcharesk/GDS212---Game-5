@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene (change "GameScene" to your actual scene name)
-        StartCoroutine(LoadLevel("Level 1"));
+        StartCoroutine(LoadLevel("Explanation Scene"));
         startButton.interactable = false;
     }
 

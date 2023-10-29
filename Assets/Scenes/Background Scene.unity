@@ -403,7 +403,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1235,7 +1242,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1591,7 +1605,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2491,7 +2512,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3125,10 +3153,6 @@ PrefabInstance:
     - target: {fileID: 1179709646199366, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
       propertyPath: m_Name
       value: light_A (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1692027003111042, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4692433924265042, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4482,7 +4506,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4778,6 +4809,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 108555530808950328, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -4798,7 +4834,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5527,7 +5565,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8290,7 +8335,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8646,7 +8698,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9206,7 +9265,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9358,7 +9424,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9858,6 +9931,7 @@ GameObject:
   - component: {fileID: 379336963}
   - component: {fileID: 379336962}
   - component: {fileID: 379336961}
+  - component: {fileID: 379336965}
   m_Layer: 0
   m_Name: Decor
   m_TagString: Untagged
@@ -10045,6 +10119,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 78.14}
   m_Center: {x: -29.19, y: 29.95, z: -36.12}
+--- !u!65 &379336965
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379336959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 1, z: 100}
+  m_Center: {x: 8.98, y: 34.97, z: -33.6}
 --- !u!1001 &379417648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10305,6 +10400,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 108555530808950328, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -10325,7 +10425,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11343,7 +11445,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11631,7 +11740,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12599,7 +12715,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13907,7 +14030,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14331,7 +14461,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15171,6 +15308,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -15191,7 +15333,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -16804,7 +16948,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17296,7 +17447,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17725,7 +17883,6 @@ GameObject:
   m_Component:
   - component: {fileID: 711965167}
   - component: {fileID: 711965168}
-  - component: {fileID: 711965169}
   m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
@@ -18445,27 +18602,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100, y: 1, z: 100}
   m_Center: {x: 35, y: 0.4, z: -10}
---- !u!65 &711965169
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711965166}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 100, y: 1, z: 100}
-  m_Center: {x: 35, y: 10, z: -10}
 --- !u!1001 &716804864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18607,7 +18743,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18827,7 +18970,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18911,7 +19061,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19403,7 +19560,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19623,7 +19787,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19775,7 +19946,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23999,7 +24177,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25043,6 +25228,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -25063,7 +25253,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -25596,6 +25788,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 108555530808950328, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -25611,7 +25808,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -25796,7 +25995,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26152,7 +26358,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26508,7 +26721,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28232,6 +28452,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -28257,7 +28482,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -28442,7 +28669,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28798,7 +29032,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29018,7 +29259,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29382,6 +29630,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -29407,7 +29660,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -30112,7 +30367,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30672,7 +30934,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31572,7 +31841,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -32676,7 +32952,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34256,7 +34539,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34748,7 +35038,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35104,7 +35401,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35188,7 +35492,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35680,7 +35991,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -38144,7 +38462,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -38840,7 +39165,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -39408,6 +39740,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 108555530808950328, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -39423,7 +39760,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -41030,7 +41369,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -41522,7 +41868,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -41946,7 +42299,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -42302,7 +42662,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -42454,7 +42821,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -43422,7 +43796,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -44050,7 +44431,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -44406,7 +44794,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -44830,7 +45225,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -45594,7 +45996,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -46222,7 +46631,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -47734,7 +48150,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -48702,7 +49125,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -49678,6 +50108,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -49703,7 +50138,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: -0.000000019845539
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -49888,7 +50325,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -49972,7 +50416,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -50192,7 +50643,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -50888,7 +51346,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -51176,7 +51641,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -52552,7 +53024,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23520821918994952, guid: fe79d128b9011424780904343bec1606,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95641788322186956, guid: fe79d128b9011424780904343bec1606, type: 3}
+    - {fileID: 65337486967923514, guid: fe79d128b9011424780904343bec1606, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -52916,6 +53395,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -52941,7 +53425,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -53670,7 +54156,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -53762,6 +54255,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -53787,7 +54285,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -54108,7 +54608,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -54464,7 +54971,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23464204685084112, guid: aa316a49adc2f084fac5ab6a40e5a8a3,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95479237328105356, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
+    - {fileID: 65000925276799298, guid: aa316a49adc2f084fac5ab6a40e5a8a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -55840,7 +56354,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -56196,7 +56717,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -56356,6 +56884,11 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23349624042461332, guid: dd00a4ca6148a08459372d1937b26f1e,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 23912320858128400, guid: dd00a4ca6148a08459372d1937b26f1e,
         type: 3}
       propertyPath: m_ScaleInLightmap
@@ -56381,7 +56914,9 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 7.34e-43
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65096621498283916, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
+    - {fileID: 95923466202574314, guid: dd00a4ca6148a08459372d1937b26f1e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -56702,7 +57237,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -57058,7 +57600,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23133127351168778, guid: fe64962353630324cbfb66d67b5fd3e4,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95438386254077222, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
+    - {fileID: 65244416297966686, guid: fe64962353630324cbfb66d67b5fd3e4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -57142,7 +57691,14 @@ PrefabInstance:
       propertyPath: m_ScaleInLightmap
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 23714301063341094, guid: 6aecf3456f11166468124c695b00f745,
+        type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 95405422100781786, guid: 6aecf3456f11166468124c695b00f745, type: 3}
+    - {fileID: 65929611673094458, guid: 6aecf3456f11166468124c695b00f745, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

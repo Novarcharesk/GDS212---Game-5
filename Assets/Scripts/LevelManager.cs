@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Level Configuration")]
     public Compound requiredCompound;
+    [SerializeField] private bool loadBackgroundScene = true;
     
     [Header("References")]
     [SerializeField] private GameObject winScreen;
@@ -17,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetSceneByName("Background Scene").isLoaded == false)
+        if (SceneManager.GetSceneByName("Background Scene").isLoaded == false && loadBackgroundScene)
         {
             levelLoad = SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
         }
@@ -46,11 +47,17 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void NextLevel(Button button)
+    public void NextLevel(Button button = null)
     {
-        button.interactable = false;
+        if (button != null)
+        {
+            button.interactable = false;
+        }
         switch (requiredCompound.name)
         {
+            case Compound.CompoundType.None:
+                StartCoroutine(LoadLevel("Level 1"));
+                break;
             case Compound.CompoundType.Water:
                 StartCoroutine(LoadLevel("Level 2"));
                 break;

@@ -183,6 +183,7 @@ public class Compound
 
     public enum CompoundType
     {
+        None,
         Water,
         Methane,
         Ammonia,

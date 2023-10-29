@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Atom
   - Connector
+  - LoadingZone
   layers:
   - Default
   - TransparentFX
