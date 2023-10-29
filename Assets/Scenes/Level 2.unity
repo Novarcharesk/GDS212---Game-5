@@ -1005,6 +1005,16 @@ PrefabInstance:
       propertyPath: m_text
       value: Methane - CH4
       objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -5.494339
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 6.872986
+      objectReference: {fileID: 0}
     - target: {fileID: 2951437121028547112, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1088,7 +1098,7 @@ PrefabInstance:
     - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 396.6056
+      value: 368.5
       objectReference: {fileID: 0}
     - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}

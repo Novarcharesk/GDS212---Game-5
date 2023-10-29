@@ -1135,6 +1135,26 @@ PrefabInstance:
       propertyPath: m_text
       value: Ammonium Hydroxide - NH4OH
       objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 0.67560005
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 5.653427
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.y
+      value: -6.976343
+      objectReference: {fileID: 0}
+    - target: {fileID: 2809387002761290309, guid: 0609907eec8e6db429624e242aa2b488,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 21.493134
+      objectReference: {fileID: 0}
     - target: {fileID: 2951437121028547112, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -1218,7 +1238,7 @@ PrefabInstance:
     - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 779.0452
+      value: 697.6
       objectReference: {fileID: 0}
     - target: {fileID: 7101032717615846460, guid: 0609907eec8e6db429624e242aa2b488,
         type: 3}
