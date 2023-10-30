@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,7 +20,17 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         // check if the background scene is loaded
-        if (SceneManager.GetSceneByName("Background Scene").isLoaded == false && loadBackgroundScene)
+        if (SceneManager.GetSceneByName("Background Scene").isLoaded == false && loadBackgroundScene && !Application.isEditor)
+        {
+            // load the background scene on top of the current scene
+            SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
+        }
+    }
+
+    // workaround for editor
+    private void Start()
+    {
+        if (SceneManager.GetSceneByName("Background Scene").isLoaded == false && loadBackgroundScene && Application.isEditor)
         {
             // load the background scene on top of the current scene
             SceneManager.LoadSceneAsync("Background Scene", LoadSceneMode.Additive);
