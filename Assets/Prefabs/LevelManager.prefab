@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 7066446884495393718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.61125, y: 10.891019, z: -27.900642}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,4 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredCompound:
     name: 0
+  loadBackgroundScene: 1
   winScreen: {fileID: 0}
+  transitionAnimator: {fileID: 0}
